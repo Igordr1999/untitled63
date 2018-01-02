@@ -24,5 +24,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('radio/', views.home_radio, name='home_radio'),
     path('radio/<name>/', views.radio_page, name='radio_page'),
-    #path('promo/'),
+
+    path('radio/', views.home_radio, name='home_radio'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
