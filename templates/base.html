@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Datter{% endblock %}</title>
+</head>
+<body>
+    {% block headmenu %}
+        <a href="{% url 'home' %}">Datter</a>
+        <a href="{% url 'home_radio' %}">Радио</a>
+    {% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+</body>
+</html>

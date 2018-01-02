@@ -1,0 +1,14 @@
+{% extends 'base_radio.html' %}
+
+{% block content %}
+    <h1>Станция {{ radio.name }}</h1>
+    <p>{{ radio.description }}</p>
+    <img src="{{ MEDIA_URL }}{{ radio.logo }}" width="100px;">
+    <audio id="player" src="{{ radio.url_broadcasting }}" controls></audio>
+    <div>
+        <button onclick="document.getElementById('player').play()">Воспроизведение</button>
+        <button onclick="document.getElementById('player').pause()">Пауза</button>
+        <button onclick="document.getElementById('player').volume+=0.1">Громкость +</button>
+        <button onclick="document.getElementById('player').volume-=0.1">Громкость -</button>
+    </div>
+{% endblock %}

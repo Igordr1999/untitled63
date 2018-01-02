@@ -1,0 +1,17 @@
+{% extends 'base_radio.html' %}
+
+{% block content %}
+    <h1>Все радиостанции</h1>
+    {% if list_radio %}
+        <ul>
+            {% for radio in list_radio %}
+                <li>
+                    <a href="{{ radio.name_en }}">{{ radio.name }}</a>
+                    <img src="{{ MEDIA_URL }}{{ radio.logo }}" width="50px">
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Не найдено ни одной станции</p>
+    {% endif %}
+{% endblock %}
